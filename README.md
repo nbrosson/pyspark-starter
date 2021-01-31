@@ -27,7 +27,7 @@ pip install -r requirements.txt
 ```
 
 
-3. Update ~/.bash_profile environment variables if needed to configure Spark (Values could be different in your environment!)
+3. Update ~/.bash_profile environment variables if needed to configure Spark (**Values could be different in your environment!**)
 
 ```
 export SPARK_HOME=/usr/local/Cellar/apache-spark/3.0.1/libexec
@@ -38,7 +38,7 @@ export PYSPARK_PYTHON=python3
 4. Download the data on Kaggle (https://www.kaggle.com/c/ieee-fraud-detection/data#).
 
 
-5. Create a file config.ini in the config folder (see the template for the structure)
+5. Create a file config.ini in the config folder (**see config/template.config.ini for the structure**)
     - DATA_PATH: path of the folder where the input data will be
     - OUTPUT_DATA_PATH: path of the folder where the output data will be
     - IDENTITY_DATA: name of identity data (default is test_identity.csv)
@@ -49,13 +49,13 @@ export PYSPARK_PYTHON=python3
 
 # Start the Spark Job
 
-1. Run the following command to prepare the spark job. It will create a dist directory in which there will be all needed files and data (actually, just one zip file)
+1. Run the following command to prepare the spark job. It will create a dist directory in which there will be all needed files and data (actually, just one zip file for now...)
 
 ```
 make
 ```
 
-2. Start the Pyspark job (feel free to update with your own parameters)
+2. Start the Pyspark job (**feel free to update with your own parameters**)
 
 ```
 spark-submit --name "Pyspark Starter" --master "local[*]" --driver-memory 12g --conf spark.executor.memory=12g --conf spark.driver.maxResultSize=20g --py-files ./dist/jobs.zip main.py
