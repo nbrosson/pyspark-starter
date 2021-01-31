@@ -61,6 +61,7 @@ make
 spark-submit --name "Pyspark Starter" --master "local[*]" --driver-memory 12g --conf spark.executor.memory=12g --conf spark.driver.maxResultSize=20g --py-files ./dist/jobs.zip main.py
 ```
 
+3. To give a specific date, add `--etl-date YYYY-MM-DD`parameter at the end of the command.
 
 # Dev and testing
 
