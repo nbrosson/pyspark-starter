@@ -1,4 +1,4 @@
-This project should be run with Python (We used version 3.7 but it might work with 3+ versions).
+This project should be run with Python (We used version 3.7).
 
 # Basic configurations
 
