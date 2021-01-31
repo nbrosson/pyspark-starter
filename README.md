@@ -35,6 +35,17 @@ export PATH=/usr/local/Cellar/apache-spark/3.0.1/bin:$PATH
 export PYSPARK_PYTHON=python3
 ```
 
+4. Download the data on Kaggle (https://www.kaggle.com/c/ieee-fraud-detection/data#).
+
+
+5. Create a file config.ini in the config folder (see the template for the structure)
+    - DATA_PATH: path of the folder where the input data will be
+    - OUTPUT_DATA_PATH: path of the folder where the output data will be
+    - IDENTITY_DATA: name of identity data (default is test_identity.csv)
+    - TRANSACTION_DATA: name of transaction data (default is test_transaction.csv)  
+
+
+
 
 # Start the Spark Job
 
@@ -44,10 +55,10 @@ export PYSPARK_PYTHON=python3
 make
 ```
 
-2. Start the Pyspark job
+2. Start the Pyspark job (feel free to update with your own parameters)
 
 ```
-spark-submit --name "Mangopay DE Test" --master "local[*]" --driver-memory 12g --conf spark.executor.memory=12g --conf spark.driver.maxResultSize=20g --py-files ./dist/jobs.zip main.py
+spark-submit --name "Pyspark Starter" --master "local[*]" --driver-memory 12g --conf spark.executor.memory=12g --conf spark.driver.maxResultSize=20g --py-files ./dist/jobs.zip main.py
 ```
 
 
